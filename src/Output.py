@@ -8,7 +8,7 @@ class Output:
         return
 
     def load_prompt(self):
-        sys.stdout.write("=> ")
+        print(self.prompt, end='', flush=True)
 
     def write_message(self, msg):
         print(msg)

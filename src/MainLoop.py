@@ -1,11 +1,11 @@
-from CommandHandler import CommandHandler
-from UserInpout import UserInput
-
+from .CommandHandler import CommandHandler
+from .UserInpout import UserInput
 from src.Output import Output
+from .Option import Option
 
 
 class MainLoop:
-    option = []
+    option = Option
     quit = False
     userInput = UserInput()
     commandHandler = CommandHandler()
