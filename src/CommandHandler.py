@@ -1,3 +1,6 @@
+#!/usr/bin/env python3
+# -*- coding: utf-8 -*-
+
 from .commands.HelpCommand import HelpCommand
 from .commands.QuitCommand import QuitCommand
 

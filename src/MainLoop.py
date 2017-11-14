@@ -1,6 +1,9 @@
+#!/usr/bin/env python3
+# -*- coding: utf-8 -*-
+
 from .CommandHandler import CommandHandler
 from .UserInpout import UserInput
-from src.Output import Output
+from .Output import Output
 from .Option import Option
 
 
