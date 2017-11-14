@@ -1,8 +1,9 @@
 #!/usr/bin/env python3
 # -*- coding: utf-8 -*-
 
-from Option import Mode
+from src.Option import Mode
 from os import system
+
 
 class ExecInstruction:
     option = None
