@@ -1,24 +1,38 @@
 #!/usr/bin/env python3
 # -*- coding: utf-8 -*-
 
-from src.Option import Mode
+from src.Option import Mode, Option
 from os import system
 
 
 class ExecInstruction:
     option = None
-    binPath = "./a.out"
 
-    def __init__(self, option, binPath):
+    def __init__(self, option):
         self.option = option
-        self.binPath = binPath
 
     def run(self, payload):
 
         if self.option:
 
             if self.option.execMode == Mode.PIPED:
-                system(payload + ' | ' + self.binPath)
+                system(payload + ' | ' + option.binPath)
 
             elif self.option.execMode == Mode.ARG:
-                system(self.binPath + ' ' + payload)
+                system(option.binPath + ' ' + payload)
+
+
+if __name__ == '__main__':
+    """
+        Unit Test
+    """
+    option = Option("./testAgr")
+    option.execMode = Mode.ARG
+    execInstruction = ExecInstruction(option)
+
+    execInstruction.run("test")
+
+    option.binPath = "./testPiped"
+    option.execMode = Mode.PIPED
+
+    execInstruction.run("test")
