@@ -1,6 +1,8 @@
-from UserInpout import UserInput
 from CommandHandler import CommandHandler
-from Output import Output
+from UserInpout import UserInput
+
+from src.Output import Output
+
 
 class MainLoop:
     option = []

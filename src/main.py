@@ -1,4 +1,4 @@
-from MainLoop import MainLoop
+from src.MainLoop import MainLoop
 
 if __name__ == '__main__':
     option = []
