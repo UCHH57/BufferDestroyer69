@@ -16,7 +16,7 @@ class ExecInstruction:
         if self.option:
 
             if self.option.execMode == Mode.PIPED:
-                system(payload + ' | ' + option.binPath)
+                system("python -c 'import sys; sys.stdout.write(\"" + payload + "\")' | " + option.binPath)
 
             elif self.option.execMode == Mode.ARG:
                 system(option.binPath + ' ' + payload)
@@ -26,13 +26,13 @@ if __name__ == '__main__':
     """
         Unit Test
     """
-    option = Option("./testAgr")
+    option = Option("../test/testArg")
     option.execMode = Mode.ARG
     execInstruction = ExecInstruction(option)
 
     execInstruction.run("test")
 
-    option.binPath = "./testPiped"
+    option.binPath = "../test/testPiped"
     option.execMode = Mode.PIPED
 
     execInstruction.run("test")
