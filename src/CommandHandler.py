@@ -20,5 +20,5 @@ class CommandHandler:
         for command in self.commands:
             if cmd[0] == command.get_command():
                 command.set_option(option, cmd)
-                print(command.get_command())
+                print(command.get_command()) #debug print
 
