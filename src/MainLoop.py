@@ -23,3 +23,5 @@ class MainLoop:
             self.output.load_prompt()
             cmd = self.userInput.read_input()
             self.commandHandler.command_handler(cmd, self.option)
+            #TODO call the execInstruction
+
