@@ -10,5 +10,5 @@ class HelpCommand(CommandInterface):
     def get_command(self):
         return self.command
 
-    def set_option(self, option):
+    def set_option(self, option, cmd):
         pass

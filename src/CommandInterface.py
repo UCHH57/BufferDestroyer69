@@ -11,5 +11,5 @@ class CommandInterface(metaclass=abc.ABCMeta):
         pass
 
     @abc.abstractclassmethod
-    def set_option(self, option):
+    def set_option(self, option, cmd):
         pass
