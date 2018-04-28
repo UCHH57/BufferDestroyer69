@@ -1,6 +1,6 @@
-# [__Buffer_Overflow_Exploitation_Assistant__]
+# [BufferDestroyer69]
 
-## __Les_buffer_overflow__
+## Les_buffer_overflow
 
 En informatique, un dépassement de tampon ou débordement de tampon (en anglais, buffer overflow) est un bug par lequel un processus, lors de l'écriture dans un tampon, écrit à l'extérieur de l'espace alloué au tampon, écrasant ainsi des informations nécessaires au processus. (cf. Wikipedia)  
 Afin d'expliquer les buffers overflow, nous allons tout d'abord revoir la mémoire des programmes informatiques.
@@ -45,7 +45,8 @@ les Stack based Buffer Overflow (SBOF) et les Heap based Buffer Overflow (HBOF).
 Leur exploitation est similaire seul la zone mémoire change.  
 Pour expliquer la faille, nous parlerons principalement des SBOF.  
 Prenons pour exemple le code suivant:
-```
+
+```c
 int auth()
 {
 	int isAdmin = 0;
@@ -58,6 +59,7 @@ int auth()
 	return (isAdmin);
 }
 ```
+
 Imaginons alors que l'utilisateur entre 31 'a'.
 ## Stack avant l'appel de 'read'
 ```
@@ -150,7 +152,7 @@ class ChangeShellcodeCommand(Command):
 ```
 
 option est une structure de donnée qui vas etre donne à l'executeur de commands
-apré l'appel de votre command c'est avec celle-ci que vous allez pouvoir fair executer vos commands offensive voir src/Option.py
+aprés l'appel de votre command c'est avec celle-ci que vous allez pouvoir fair executer vos commands offensive. (cf. src/Option.py)
 
 ## Troisème étape
 
@@ -158,7 +160,7 @@ Importer votre commande dans le src/CommandHandler.py
 
 `from .commands.ChangeShellcodeCommand import ChangeShellcodeCommand`
 
-puis ajoutez le point d'entre de votre command dans la function init_all_command
+puis ajoutez le point d'entrée de votre command dans la function init_all_command
 
 `self.commands.append(ChangeShellcodeCommand())`
 
