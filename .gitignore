@@ -3,7 +3,15 @@ __pycache__/
 *.py[cod]
 *$py.class
 
-# pyCharm shit
+# Test Binary
+ch*
+a.out*
+
+# gdb and peda
+.gdb_history
+peda-session*
+
+# pyCharm
 .idea/
 
 # C extensions

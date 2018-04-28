@@ -1,14 +1,12 @@
 #!/usr/bin/env python3
 # -*- coding: utf-8 -*-
 
-from src.CommandInterface import CommandInterface
+from Command import Command
 
 
-class QuitCommand(CommandInterface):
+class QuitCommand(Command):
     command = "quit"
-
-    def get_command(self):
-        return self.command
+    help = "\tExit THE BufferDestroyer69."
 
     def set_option(self, option, cmd):
-        pass
+        exit(0)
